@@ -13,6 +13,7 @@ public class Member {
     private Long id;
 //    @Column(name="member_name")
     private String name;
+    private int ag;
 
     public Long getId() {
         return id;
@@ -28,5 +29,13 @@ public class Member {
 
     public void setName(String name) {
         this.name = name;
+    }
+
+    public int getAg() {
+        return ag;
+    }
+
+    public void setAg(int ag) {
+        this.ag = ag;
     }
 }

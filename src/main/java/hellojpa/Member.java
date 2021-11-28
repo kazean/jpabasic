@@ -13,7 +13,14 @@ public class Member {
     private Long id;
 //    @Column(name="member_name")
     private String name;
-    private int ag;
+
+    public Member(){
+
+    }
+    public Member(Long id, String name) {
+        this.id = id;
+        this.name = name;
+    }
 
     public Long getId() {
         return id;
@@ -31,11 +38,4 @@ public class Member {
         this.name = name;
     }
 
-    public int getAg() {
-        return ag;
-    }
-
-    public void setAg(int ag) {
-        this.ag = ag;
-    }
 }

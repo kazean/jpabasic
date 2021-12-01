@@ -1,9 +1,11 @@
 package hellojpa;
 
+import hellojpa.Member;
+
 import javax.persistence.*;
 import java.util.List;
 
-public class JpaMain {
+public class JpaMain01 {
     public static void main(String[] args) {
         EntityManagerFactory emf = Persistence.createEntityManagerFactory("hello");
 //        transaction 단위

@@ -16,11 +16,11 @@
             <property name="hibernate.format_sql" value="true" />
             <property name="hibernate.use_sql_comments" value="true" />
 
-            <!--<property name="hibernate.id.new_generator_mappings" value="true" />-->
-            <!--<property name="hibernate.hbm2ddl.auto" value="create" />-->
+            <property name="hibernate.id.new_generator_mappings" value="true" />
+            <property name="hibernate.hbm2ddl.auto" value="create" />
         </properties>
     </persistence-unit>
-
+    <!--
     <persistence-unit name="shop">
         <properties>
             <property name="javax.persistence.jdbc.driver" value="org.h2.Driver"/>
@@ -29,7 +29,6 @@
             <property name="javax.persistence.jdbc.url" value="jdbc:h2:C:\gunna\study\jpa\h2ws\shop;AUTO_SERVER=true"/>
             <property name="hibernate.dialect" value="org.hibernate.dialect.H2Dialect"/>
             
-            <!--opt-->
             <property name="hibernate.show_sql" value="true"/>
             <property name="hibernate.format_sql" value="true"/>
             <property name="hibernate.use_sql_comments" value="true"/>
@@ -38,5 +37,6 @@
             <property name="hibernate.id.new_generator_mappings" value="true"/>
         </properties>
     </persistence-unit>
+    -->
 
 </persistence>

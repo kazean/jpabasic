@@ -17,9 +17,11 @@ public class Member {
     public Member(){
 
     }
-    public Member(Long id, String name) {
+
+    public Member(Long id, String name, Team team) {
         this.id = id;
         this.name = name;
+        this.team = team;
     }
 
     public Long getId() {

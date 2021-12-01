@@ -8,8 +8,9 @@
         <outputRelativeToContentRoot value="true" />
         <module name="ch01" />
         <module name="ch05" />
+        <module name="ch06" />
         <module name="ch0103" />
-        <module name="ch04" />
+        <module name="jpa_shop" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>

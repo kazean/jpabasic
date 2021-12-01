@@ -12,5 +12,8 @@
         <module name="ch04" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="jpa-basic" target="1.5" />
+    </bytecodeTargetLevel>
   </component>
 </project>

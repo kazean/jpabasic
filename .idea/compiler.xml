@@ -6,8 +6,8 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="ch01" />
         <module name="ch05" />
-        <module name="jpa-basic" />
         <module name="ch0103" />
         <module name="ch04" />
       </profile>

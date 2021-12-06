@@ -5,18 +5,20 @@ import java.util.ArrayList;
 import java.util.List;
 
 @Entity
-public class Category {
+public class Category extends BaseEntity{
     @Id @GeneratedValue @Column(name = "CATEGORY_ID")
     private Long id;
     private String name;
-    private  Long parentId;
+//    private  Long parentId;
 
     @ManyToMany
-    @JoinTable(name = "CATEGORY_ITEM", joinColumns = @JoinColumn(name = "CATEGORY_ID"), inverseJoinColumns = @JoinColumn(name = "ITEM_ID"))
+    @JoinTable(name = "CATEGORY_ITEM",
+            joinColumns = @JoinColumn(name = "CATEGORY_ID"),
+            inverseJoinColumns = @JoinColumn(name = "ITEM_ID"))
     private List<Item> items = new ArrayList<>();
 
     @ManyToOne
-    @JoinColumn(name = "parentId")
+    @JoinColumn(name = "PARENT_ID")
     private Category parent;
 
     @OneToMany(mappedBy = "parent")
@@ -39,14 +41,6 @@ public class Category {
 
     public void setName(String name) {
         this.name = name;
-    }
-
-    public Long getParentId() {
-        return parentId;
-    }
-
-    public void setParentId(Long parentId) {
-        this.parentId = parentId;
     }
 
     public List<Item> getItems() {

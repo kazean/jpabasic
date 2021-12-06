@@ -5,7 +5,9 @@ import java.util.ArrayList;
 import java.util.List;
 
 @Entity
-public class Item {
+@Inheritance(strategy = InheritanceType.SINGLE_TABLE)
+@DiscriminatorColumn(name = "DTYPE")
+public abstract class Item extends BaseEntity{
     @Id @Column(name = "ITEM_ID") @GeneratedValue
     private Long id;
     private String name;
@@ -18,11 +20,6 @@ public class Item {
     public Item() {
     }
 
-    public Item( String name, int price, int stockQuantity) {
-        this.name = name;
-        this.price = price;
-        this.stockQuantity = stockQuantity;
-    }
 
     public Long getId() {
         return id;

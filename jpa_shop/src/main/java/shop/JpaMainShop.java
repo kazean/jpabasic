@@ -15,6 +15,7 @@ public class JpaMainShop {
         EntityTransaction tx = em.getTransaction();
         tx.begin();
         try{
+
             Member member1 = new Member("memberA", "seoul", "35-10", "A01");
             em.persist(member1);
             Order orderMem1 = new Order();
@@ -23,19 +24,32 @@ public class JpaMainShop {
             orderMem1.setStatus(OrderStatus.ORDER);
             em.persist(orderMem1);
 
-            Item pen = new Item("PEN", 2000, 5);
+            /*Item pen = new Item("PEN", 2000, 5);
             Item eraser = new Item("ERASER", 1000, 1);
             Item white = new Item("WHITE", 2500, 1);
             Item postIt = new Item("POST_IT", 500, 1);
             em.persist(pen);
             em.persist(eraser);
             em.persist(white);
-            em.persist(postIt);
+            em.persist(postIt);*/
+            Album album = new Album();
+            album.setName("Album1");
+            album.setPrice(2000);
+            album.setStockQuantity(200);
+            album.setArtist("artist1");
+            album.setEtc("etc1");
+            em.persist(album);
+
+            Movie movie = new Movie();
+            movie.setName("movie1");
+            movie.setActor("Actor1");
+            movie.setDirector("director");
+            em.persist(movie);
 
             OrderItem orderItemMem1_01 = new OrderItem(4000, 2);
             OrderItem orderItemMem1_02 = new OrderItem(2000, 2);
-            orderItemMem1_01.setItem(pen);
-            orderItemMem1_02.setItem(eraser);
+            orderItemMem1_01.setItem(album);
+            orderItemMem1_02.setItem(movie);
             orderMem1.addOrderItems(orderItemMem1_01);
             orderMem1.addOrderItems(orderItemMem1_02);
             em.persist(orderItemMem1_01);
